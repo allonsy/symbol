@@ -1,0 +1,33 @@
+91+v          pushes newline onto the stack
+v  <
+>91+3*3+v     pushes ! onto the stack
+v       <
+>91+@*v       pushes d onto the stack
+v     <
+>91+@*8+v     pushes l onto the stack
+v       <
+>91+@*77++v   pushes r onto the stack
+v         <
+>91+@*56++v   pushes o onto the stack
+v         <
+>891+*7+v     pushes w onto the stack
+v       <
+>84*v         etc...
+v   <
+>91+4*4+v
+v       <
+>91+@*56++v
+v         <
+>91+@*8+v
+v       <
+>91+@*8+v
+v       <
+>91+@*1+v
+v       <
+>98*v
+v   <
+  
+   ;
+>e!|        iterates over the stack until empty, popping and printing each character
+   .
+^  <
