@@ -2,5 +2,8 @@
 name = "symbol"
 version = "0.1.0"
 authors = ["Alec S <linuxbash8@gmail.com>"]
+description = "A small esoteric visual programming language"
+readme = "README.md"
+license = "MIT"
 
 [dependencies]
