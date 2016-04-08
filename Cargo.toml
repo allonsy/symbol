@@ -1,0 +1,6 @@
+[package]
+name = "symbol"
+version = "0.1.0"
+authors = ["Alec S <linuxbash8@gmail.com>"]
+
+[dependencies]
