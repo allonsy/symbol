@@ -46,8 +46,8 @@ The symbols in the language are as follows:
 * ` ` : The space character is ignored and control flow moves on to the next character in the reading direction
 * `,` : Ignored exactly like the space character. This helps if you are using an editor that likes to remove lines with only spaces (cough cough atom cough cough)
 * If the reader encounters any character it doesn't recognize, it will panic with an error
-* Note that there are no comments in the language. However, you can always include comments in places where you are certain control
-flow will never enter (see the hello world example)
+* Note that there are no comments in the language. However, you can always include comments in places where you are certain control flow will never enter (see the hello world example)
+* Also note that for operations that are not commutative like subtraction and division, the evaluator will follow the example of RPN calculators. This means that if you push 4 on the stack and then 2 and then call subtract, it will do `4-2`, not `2-4`.
 # Examples
 The following is hello world written in symbol. It will run as is even with the included comments:
 ```
