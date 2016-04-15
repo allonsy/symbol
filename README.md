@@ -80,9 +80,9 @@ v       <
 >98*v
 v   <
 ,
-,,,;
+   ;
 >e!|        iterates over the stack until empty, popping and printing each character
-,,,.
+   .
 ^  <
 ```
 Please see the `examples` directory for more examples
