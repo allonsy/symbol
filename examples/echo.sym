@@ -1,5 +1,5 @@
-v   grabs a character from the user and echoes it to the string until there is no more input
- `
- `
->,.v
-^  <
+v   grabs a character from the user and echoes it to the string until there is no more input at which point it quits
+,
+,    ;
+>$@1+|
+^ .  <

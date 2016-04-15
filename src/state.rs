@@ -1,7 +1,6 @@
-/* allonsy state.rs
-* Manages state of the symbol machine */
+//! allonsy state.rs
+//! Manages state of the symbol machine
 
-use std;
 
 pub enum Direction {
     Left,
@@ -29,7 +28,7 @@ impl State {
 
     pub fn pop(&mut self) -> i32 {
      let res = self.stack.pop();
-     if std::option::Option::is_none(&res) {
+     if Option::is_none(&res) {
          panic!("Stack is empty!");
      }
      res.unwrap()

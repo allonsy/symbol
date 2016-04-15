@@ -1,12 +1,12 @@
-/* Author: Allonsy, main symbol file */
+//! Symbol: A simple visual programming language based on <><
 
 mod state;
 
 use std::fs::File;
 use std::io::{Read,Write};
 
-/* lines converts a Vector containing file data into vectors of lines
- * each element is a vector of chars and the line length for easy access */
+/// lines converts a Vector containing file data into vectors of lines
+/// each element is a vector of chars and the line length for easy access
 fn lines(v : Vec<u8>) -> Vec<(Vec<char>, i32)> {
     let mut ret = Vec::new();
     let mut new_line = Vec::new();
@@ -38,7 +38,10 @@ fn print_char(val : i32) {
 
 fn read_char() -> i32 {
     let mut buf = [0 as u8; 1];
-    std::io::stdin().read(&mut buf).unwrap();
+    let len = std::io::stdin().read(&mut buf).unwrap();
+    if len == 0 {
+        return -1;
+    }
     return buf[0] as i32;
 }
 
@@ -46,7 +49,7 @@ fn read_char() -> i32 {
 fn main() {
     let fname_option = std::env::args().nth(1);
     if fname_option.is_none() {
-        write_error("Please provide a file name!\n");
+        write_error("Please provide a file name!\nUsage: ./symbol <filename>\n");
     }
     let fname = fname_option.unwrap();
     let mut f = File::open(fname).unwrap();
@@ -109,10 +112,11 @@ fn main() {
             '!' => st.logical_neg(),
             '~' => st.negate(),
             '.' => print_char(st.pop()),
-            ',' => st.push(read_char()),
+            '$' => st.push(read_char()),
             'g' => st.is_gt(),
             'l' => st.is_lt(),
             ' ' => (),
+            ',' => (),
              _  => {
                  write_error(&format!("Unknown Character in program: '{}' \n", target_char));
                 },
