@@ -1,4 +1,4 @@
-# symbol
+# symbol [![Build Status](https://travis-ci.org/allonsy/symbol.svg?branch=master)](https://travis-ci.org/allonsy/symbol)
 A small esoteric symbolic programming language by allonsy. This language is a language inspired by
 the esoteric programming language '<><'
 
